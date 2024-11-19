@@ -1,53 +1,112 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
 body {
     font-family: Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: lightgray; /* Light gray background */
+    background-color: lightgray;
 }
 
-/* Book Cover Container */
 .book-cover {
     width: 500px;
     height: 700px;
-    background-color: white;
-    border: 3px solid black; /* Black border around the cover */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     padding: 40px;
+    opacity: 0;  
+    animation: fadeIn 2s forwards; 
 }
 
-/* Title Section */
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 90px; /* Same size for all letters */
+    font-size: 180px; 
     font-weight: bold;
     margin-bottom: 50px;
+    opacity: 0; 
+    animation: slideUp 1.5s 1s forwards;
 }
 
-.title span {
-    margin: 0 15px;
+
+.s { animation-delay: 0.5s; }
+.m { animation-delay: 0.7s; }
+.l { animation-delay: 0.9s; }
+.xl { animation-delay: 1.1s; }
 }
 
-/* Authors Section */
-.authors p {
-    font-size: 18px;
-    font-weight: normal;
+.OMA p {
+    font-size: 155px;
+    font-weight: bold;
     color: black;
-    text-align: left;
-    padding-left: 95px;  /* Align the text with the "X" in XL */
+    text-align: right;
+    padding-left: 95px; 
     margin-top: auto;
+    opacity: 0; /* Initially hide the author text */
+    animation: slideIn 1.5s 2s forwards;
+}
+.Rem p {
+    font-size: 55px;
+    font-weight: bold;
+    color: royalblue;
+    text-align: right;
+    padding-left: 95px; 
+    margin-top: auto;
+    opacity: 0; /* Initially hide the author text */
+    animation: slideIn 1.5s 2s forwards;
+}
+.Bruce p {
+    font-size: 55px;
+    font-weight: bold;
+    color: black;
+    text-align: right;
+    padding-left: 95px;  
+    margin-top: auto;
+    opacity: 0; /* Initially hide the author text */
+    animation: slideIn 1.5s 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-up effect for title */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in each letter in the title */
+@keyframes fadeInLetter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in effect for the author's name */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
