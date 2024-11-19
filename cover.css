@@ -1,0 +1,53 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightgray; /* Light gray background */
+}
+
+/* Book Cover Container */
+.book-cover {
+    width: 500px;
+    height: 700px;
+    background-color: white;
+    border: 3px solid black; /* Black border around the cover */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Title Section */
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px; /* Same size for all letters */
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.title span {
+    margin: 0 15px;
+}
+
+/* Authors Section */
+.authors p {
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+    text-align: left;
+    padding-left: 95px;  /* Align the text with the "X" in XL */
+    margin-top: auto;
+}
